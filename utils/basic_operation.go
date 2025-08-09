@@ -21,9 +21,16 @@ func push(srcHead *list.Node, destHead *list.Node) (*list.Node, *list.Node) {
 		return srcHead, destHead
 	}
 
-    newDestHead := srcHead
-    newSrcHead := srcHead.NextNode
-    newDestHead.NextNode = destHead
+	newDestHead := srcHead
+	newSrcHead := srcHead.NextNode
+	newDestHead.NextNode = destHead
 
-    return newSrcHead, newDestHead
+	return newSrcHead, newDestHead
+}
+
+// rotate the head to tail node
+func rotate(head *list.Node) *list.Node {
+	if head == nil {
+		return head
+	}
 }
