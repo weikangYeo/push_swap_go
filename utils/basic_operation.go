@@ -30,7 +30,38 @@ func push(srcHead *list.Node, destHead *list.Node) (*list.Node, *list.Node) {
 
 // rotate the head to tail node
 func rotate(head *list.Node) *list.Node {
-	if head == nil {
+	if head == nil || head.NextNode == nil{
 		return head
 	}
+
+	// iterate to end of tail
+	tail := head
+	for tail.NextNode != nil {
+		tail = tail.NextNode
+	}
+
+	newHead := head.NextNode
+	tail.NextNode = head
+	head.NextNode = nil
+	return newHead
+}
+
+// change tail node to head node
+func reverseRotate(head *list.Node) *list.Node {
+	if head == nil || head.NextNode == nil{
+		return head
+	}
+
+	// iterate to end of tail
+	tail := head
+	secondLast := head
+	for tail.NextNode != nil {
+		secondLast = tail
+		tail = tail.NextNode
+	}
+
+	tail.NextNode = head
+	secondLast.NextNode = nil
+
+	return tail
 }
