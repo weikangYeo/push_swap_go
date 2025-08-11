@@ -1,6 +1,14 @@
 # PUSH SWAP
 Just a side project to grill my Go lang skill, get me out from comfort zone (since I am not a Go person)
 
+## TODO
+- [ ] Wrapper for basic operation (that print out steps)
+- [ ] Dry run for diff operation
+    - [ ] Dummy way, just search and push everything to b (sorted), and push back to a
+    - [ ] Half Dummy way, push half of things to b, and set a mid pts, then sort a, and push everything back to a
+    - [ ] chunk method
+    - [ ] any other
+
 ## How to run
 
 ## Checker function
