@@ -1,6 +1,7 @@
 package main
 
 import (
+	"push_swap/algo"
 	"push_swap/model"
 	"push_swap/utils"
 	"push_swap/sort"
@@ -21,4 +22,5 @@ func main() {
 
 	sortedSlice := sort.MergeSort(intSlice)
 
+	algo.RunSimpleAlgo(intSlice, sortedSlice)
 }

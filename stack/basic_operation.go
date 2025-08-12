@@ -66,7 +66,7 @@ func reverseRotate(head *list.Node) *list.Node {
     return tail
 }
 
-func createStack(intSlice []int) *list.Node {
+func CreateStack(intSlice []int) *list.Node {
     var head *list.Node
 
     for i := len(intSlice) - 1; i >= 0; i-- {
