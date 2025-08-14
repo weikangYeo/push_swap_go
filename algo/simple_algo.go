@@ -8,4 +8,11 @@ func RunSimpleAlgo(inputSlice, sortedSlice []int) {
 	stackA := stack.CreateStack(inputSlice)
 	stackB := nil
 
+	for _, currentValue := range sortedSlice {
+		idx := stackA.IndexOf(currentValue)
+		
+		// divide half to see it is first half or second half
+		// then decide it is ra or rra to reach the value
+
+	}
 }
