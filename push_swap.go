@@ -1,11 +1,10 @@
 package main
 
 import (
-	"push_swap/algo"
-	"push_swap/model"
-	"push_swap/utils"
-	"push_swap/sort"
 	"fmt"
+	"push_swap/algo"
+	"push_swap/sort"
+	"push_swap/utils"
 )
 
 func main() {

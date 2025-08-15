@@ -2,7 +2,6 @@ package utils
 
 import (
 	"errors"
-	"fmt"
 	"os"
 	"strconv"
 )
@@ -33,4 +32,3 @@ func ParseInts(args []string) ([]int, error) {
 func ReadIntSliceFromTerminal() ([]int, error) {
 	return ParseInts(os.Args[1:])
 }
-

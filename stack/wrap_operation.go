@@ -24,7 +24,8 @@ func SwapBothStack(a, b *model.Node) (*model.Node, *model.Node) {
 
 func PushToA(a, b *model.Node) (*model.Node, *model.Node) {
 	fmt.Println("pa")
-	return push(b, a)
+	b, a = push(b, a)
+	return a, b
 }
 
 func PushToB(a, b *model.Node) (*model.Node, *model.Node) {
