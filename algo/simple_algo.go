@@ -8,6 +8,7 @@ import (
 
 // simple algo is simply just iterate the stack A, and find the smallest,
 // then push to stack B, when A is empty push it back A
+// cons of this is will be too many steps, as it will fail out the min threshold and become KO directly
 func RunSimpleAlgo(inputSlice, sortedSlice []int) error {
 	stackA := stack.CreateStack(inputSlice)
 	var stackB *model.Node

@@ -12,6 +12,16 @@ Just a side project to grill my Go lang skill, get me out from comfort zone (sin
     - [ ] any other
 
 ## How to run
+### Run via Go Run
+`go run push_swap.go 1 2 3`
+
+### Run via Executable
+```sh
+go build  
+```
+```sh
+./push_swap  2 3 1
+```
 
 ## Checker function
 

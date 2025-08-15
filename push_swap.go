@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"os"
 	"push_swap/algo"
 	"push_swap/sort"
 	"push_swap/utils"
@@ -10,8 +11,8 @@ import (
 func main() {
 	intSlice, err := utils.ReadIntSliceFromTerminal()
 	if err != nil {
-		// any input error will just print out and stop program.
-		fmt.Print(err)
+		// use os.Stderr so it will write to stderr in terminal, which most of open source checker is check based on this
+		fmt.Fprintln(os.Stderr, err)
 		return
 	}
 	if intSlice == nil {

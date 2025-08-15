@@ -2,6 +2,7 @@ package utils
 
 import (
 	"errors"
+	"math"
 	"os"
 	"strconv"
 )
@@ -17,11 +18,25 @@ func ParseInts(args []string) ([]int, error) {
 	// Create a slice of the correct size.
 	numbers := make([]int, len(args))
 
+	numMap := make(map[int]int)
 	for i, argStr := range args {
 		num, err := strconv.Atoi(argStr)
 		if err != nil {
 			// invalid input found, but show generic Error as requirement asked
-			return nil, errors.New("Error\n")
+			return nil, errors.New("Error")
+		}
+
+		if num < math.MinInt32 || num > math.MaxInt32 {
+			// show generic Error as requirement asked
+			return nil, errors.New("Error")
+		}
+
+		_, isExists := numMap[num]
+		if isExists {
+			// show generic Error as requirement asked
+			return nil, errors.New("Error")
+		} else {
+			numMap[num] = 1
 		}
 		numbers[i] = num
 	}
