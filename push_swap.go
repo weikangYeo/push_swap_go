@@ -4,7 +4,6 @@ import (
 	"fmt"
 	"os"
 	"push_swap/algo"
-	"push_swap/sort"
 	"push_swap/utils"
 )
 
@@ -20,7 +19,6 @@ func main() {
 		return
 	}
 
-	sortedSlice := sort.MergeSort(intSlice)
-
-	algo.RunSimpleAlgo(intSlice, sortedSlice)
+	// algo.RunSimpleAlgo(intSlice)
+	algo.RunLongIncrementAlgo(intSlice)
 }

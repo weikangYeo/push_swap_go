@@ -93,3 +93,5 @@ Recommended Algorithm: LIS + Smart Insertion
   project.
 ```
 
+## Credit
+Credit to https://github.com/gemartin99/Push-Swap-Tester script to validate executable functionality
