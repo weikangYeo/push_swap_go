@@ -33,19 +33,14 @@ func (head *Node) Length() int {
 	return i
 }
 
-func (head *Node) GetArrValue() []int {
-	size := head.Length()
-	if size == 0 {
-		return []int{}
-	}
-
-	arr := make([]int, size)
+func (head *Node) ToSlice() []int {
 	ptr := head
+	var values []int
 	for ptr != nil {
-		arr = append(arr, ptr.Value)
+		values = append(values, ptr.Value)
 		ptr = ptr.NextNode
 	}
-	return arr
+	return values
 }
 
 func (head *Node) IsSorted() bool {
@@ -61,6 +56,7 @@ func (head *Node) IsSorted() bool {
 		if ptr.Value < previousValue {
 			return false
 		}
+		previousValue = ptr.Value
 		ptr = ptr.NextNode
 	}
 	return true
