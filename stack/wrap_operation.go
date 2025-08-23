@@ -61,7 +61,7 @@ func ReverseRotateB(head *model.Node) *model.Node {
 }
 
 func ReverseRotateBoth(a *model.Node, b *model.Node) (*model.Node, *model.Node) {
-	fmt.Println("rr")
+	fmt.Println("rrr")
 	a = reverseRotate(a)
 	b = reverseRotate(b)
 	return a, b

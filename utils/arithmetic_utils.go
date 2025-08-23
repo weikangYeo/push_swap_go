@@ -10,3 +10,10 @@ func GetPositiveDiff(a, b int) int {
 
 	return result
 }
+
+func GetMin(a, b int) int {
+	if a < b {
+		return a
+	}
+	return b
+}
